@@ -1,0 +1,10 @@
+mysql_data/
+logs/
+elastic_data/
+mongo_data/
+mysql_config/my.cnf
+logstash_config/logstash.conf
+docker-compose.override.yml
+*.log
+.env
+.DS_Store
