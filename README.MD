@@ -23,28 +23,28 @@
 3. Measure performance with `long_query_time = 0`
     ```
     SET GLOBAL long_query_time = 0;
-    SELECT * FROM employee;            -- Fast query
-    SELECT SLEEP(1);                   -- 1 second
-    SELECT SLEEP(2);                   -- 2 seconds
-    SELECT SLEEP(5);                   -- 5 seconds
+    SELECT * FROM employee;
+    SELECT SLEEP(1);
+    SELECT SLEEP(2);
+    SELECT SLEEP(5);
     ```
 
 4. Measure performance with `long_query_time = 1`
     ```
     SET GLOBAL long_query_time = 1;
-    SELECT * FROM employee;            -- Fast query
-    SELECT SLEEP(1);                   -- 1 second (should NOT be logged)
-    SELECT SLEEP(2);                   -- 2 seconds (should be logged)
-    SELECT SLEEP(5);                   -- 5 seconds (should be logged)
+    SELECT * FROM employee;
+    SELECT SLEEP(1);
+    SELECT SLEEP(2);
+    SELECT SLEEP(5);
     ```
 
 4. Measure performance with `long_query_time = 10`
     ```
     SET GLOBAL long_query_time = 10;
-    SELECT * FROM employee;            -- Fast query
-    SELECT SLEEP(1);                   -- 1 second (should NOT be logged)
-    SELECT SLEEP(2);                   -- 2 seconds (should NOT be logged)
-    SELECT SLEEP(12);                  -- 12 seconds (should be logged)
+    SELECT * FROM employee;
+    SELECT SLEEP(1);
+    SELECT SLEEP(2);
+    SELECT SLEEP(12);
     ```
 5. Get MySQL query logs
 
